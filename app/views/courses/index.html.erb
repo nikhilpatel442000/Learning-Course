@@ -1,0 +1,10 @@
+<!-- app/views/courses/index.html.erb -->
+<h1>All Courses</h1>
+
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <strong><%= course.name %></strong>: <%= course.description %>
+    </li>
+  <% end %>
+</ul>
