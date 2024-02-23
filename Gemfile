@@ -50,6 +50,7 @@ gem "bootsnap", require: false
 
 gem 'activeadmin' # For Admin Functionalities
 gem 'devise' # For user authentication
+gem 'sassc-rails', '~> 2.0' # For Load SCSS Files
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
