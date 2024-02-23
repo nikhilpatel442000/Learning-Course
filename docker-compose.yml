@@ -1,0 +1,29 @@
+version: '3'
+services:
+  web:
+    build: ./
+    command: rails server -b 0.0.0.0
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    # restart: 'no'
+
+
+    environment:
+      # - DB_URL=postgres://rails:rails@db:5432/course_catalog_development
+      # - POSTGRES_NAME=rails
+      - POSTGRES_USER=rails
+      - POSTGRES_PASSWORD=rails
+      # - POSTGRES_DB=course_catalog_development
+      # - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data: # named volume
