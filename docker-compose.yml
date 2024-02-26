@@ -10,17 +10,18 @@ services:
       - .:/app
     depends_on:
       - db
+    environment:
+      - DATABASE_URL=postgres://rails:rails@db:5432/course_catalog_development
+
   db:
     image: postgres:latest
-    # restart: 'no'
 
 
     environment:
-      # - DB_URL=postgres://rails:rails@db:5432/course_catalog_development
       # - POSTGRES_NAME=rails
       - POSTGRES_USER=rails
       - POSTGRES_PASSWORD=rails
-      # - POSTGRES_DB=course_catalog_development
+      # - POSTGRES_DB=course_catalog_development2
       # - POSTGRES_HOST_AUTH_METHOD=trust
     volumes:
       - postgres_data:/var/lib/postgresql/data
