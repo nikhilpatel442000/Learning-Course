@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'activeadmin' # For Admin Functionalities
+gem 'bootstrap', '~> 5.3.0' # For styling Purposes. 
 gem 'devise' # For user authentication
 gem 'sassc-rails', '~> 2.0' # For Load SCSS Files
 
