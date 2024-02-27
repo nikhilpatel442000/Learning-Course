@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://rails:rails@db:5432/course_catalog_development
+      - DATABASE_URL=${DATABASE_URL}
 
   db:
     image: postgres:latest
