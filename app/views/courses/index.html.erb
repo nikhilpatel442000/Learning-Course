@@ -1,9 +1,15 @@
-<h1>All Courses</h1>
+<div class="container">
+  <h1>All Courses</h1>
 
-<ul>
-  <% @courses.each do |course| %>
-    <li>
-      <%= link_to course.title, course %>
-    </li>
-  <% end %>
-</ul>
+  <div class="course-list">
+    <% @courses.each do |course| %>
+      <div class="course-thumbnail" style="background-image: url('<%= course.thumbnail %>')">
+        <div class="overlay">
+          <h2><%= course.name %></h2>
+          <p><%= course.description %></p>
+          <%= link_to 'View Course', course, class: 'btn' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

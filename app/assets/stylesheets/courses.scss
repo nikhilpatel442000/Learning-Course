@@ -1,0 +1,111 @@
+/* app/assets/stylesheets/courses.scss */
+
+.course-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa; // Light gray background
+
+  .thumbnail {
+    flex: 1;
+    margin-right: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); // Add shadow effect
+    }
+  }
+
+  .description {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; // White background
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); // Add shadow effect
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #333333; // Dark text color
+    }
+
+    p {
+      font-size: 18px;
+      color: #666666; // Medium dark text color
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff; // Primary button color
+      color: #ffffff; // Button text color
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3; // Darker color on hover
+      }
+    }
+  }
+}
+
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .course-thumbnail {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(32, 19, 32, 1.5); // Semi-transparent overlay
+      padding: 20px;
+      color: #ffffff;
+      opacity: 0.8; // Initially visible
+      transition: opacity 0.3s ease;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 1; // Show overlay on hover
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #cccccc;
+  }
+}
