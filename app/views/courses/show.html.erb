@@ -1,0 +1,12 @@
+<!-- app/views/courses/show.html.erb -->
+
+<h1><%= @course.name %></h1>
+
+<div class="course-details">
+
+  <div class="description">
+    <p><%= @course.description %></p>
+  </div>
+</div>
+
+<%= link_to "Back to Courses", courses_path, class: "btn" %>
