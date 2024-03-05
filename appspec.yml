@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/eb-rails/deployment
+    file_exists_behavior: OVERWRITE
+permissions:
+  - object: /var/www/eb-rails/deployment
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 775
